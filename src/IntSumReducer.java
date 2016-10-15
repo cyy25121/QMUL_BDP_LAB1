@@ -11,12 +11,9 @@ public class IntSumReducer extends Reducer<Text, IntWritable, Text, IntWritable>
 
         int sum = 0;
         for (IntWritable value : values) {
-
-            //complete code here
-
+			sum += value.get();
         }
         result.set(sum);
-
-        //complete code here
+		context.write(key, result);
     }
 }
